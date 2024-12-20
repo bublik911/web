@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cressida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип Cressida" class="logo-image">
+            </div>
+            <div class="site-name">Cressida</div>
+            <div class="auth-buttons">
+                <!-- Кнопки Вход и Авторизация -->
+                <label for="login-toggle" class="auth-button">Вход</label>
+                <label for="register-toggle" class="auth-button">Регистрация</label>
+            </div>
+        </div>
+        <nav class="top-nav">
+            <a href="service.htm">Сервис</a>
+            <a href="certificates.htm">Подарочные сертификаты</a>
+            <a href="production.htm">Производство</a>
+            <form class="search-form" action="search.htm" method="get">
+                <input type="text" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                <button type="submit">Найти</button>
+            </form>
+        </nav>
+
+        <!-- Чекбоксы для управления отображением меню -->
+        <input type="checkbox" id="login-toggle" class="menu-toggle">
+        <div class="auth-menu">
+            <label for="login-toggle" class="close-menu">&times;</label>
+            <form>
+                <h2>Вход</h2>
+                <label for="login-login">Логин:</label>
+                <input type="text" id="login-login" name="login" required>
+                <label for="login-password">Пароль:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+
+        <input type="checkbox" id="register-toggle" class="menu-toggle">
+        <div class="auth-menu">
+            <label for="register-toggle" class="close-menu">&times;</label>
+            <form>
+                <h2>Регистрация</h2>
+
+                <label for="register-lastname">Фамилия:</label>
+                <input type="text" id="register-lastname" name="lastname" required>
+                <label for="register-firstname">Имя:</label>
+                <input type="text" id="register-firstname" name="firstname" required>
+                <label for="register-login">Логин:</label>
+                <input type="text" id="register-login" name="login" required>
+                <label for="register-password">Пароль:</label>
+                <input type="password" id="register-password" name="password" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="policy-agreement" name="policy" required>
+                    <label for="policy-agreement">Я соглашаюсь с политикой конфиденциальности</label>
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </header>
+
+
+    <div class="content">
+
+        <aside class="sidebar">
+            <a href="index.htm">Главная</a>
+            <a href="about.htm">О нас</a>
+            <a href="catalog.htm">Каталог</a>
+            <a href="contacts.htm">Контакты</a>
+            <a href="feedback.htm">Отзывы</a>
+        </aside>
+
+
+        <main class="product-page">
+
+            <button class="add-to-cart-button">Добавить в корзину</button>
+            <a href="catalog.htm" class="back-link">Вернуться в каталог</a>
+        </main>
+
+
+        <aside class="image-container">
+            <img src="images/sale.png" alt="Изображение">
+        </aside>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Все права защищены</p>
+    </footer>
+
+
+</body>
+</html>

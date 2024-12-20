@@ -1,0 +1,135 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<script src="/js/search.js"></script>
+
+<script src="js/site.js"></script>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Interier</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="content">
+
+        @if (User.Identity.IsAuthenticated)
+            {
+            <aside class="sidebar">
+                <a href="/Index">Главная</a>
+                <a href="/About">О нас</a>
+                <a href="/Catalog">Каталог</a>
+                <a href="/Contacts">Контакты</a>
+                <a href="/Feedback">Отзывы</a>
+                <a href="/pdf/privacy-policy.pdf" target="_blank">Политика конфиденциальности</a>
+            </aside>
+        }
+        else
+        {
+            <aside class="sidebar">
+                <a href="/Index">Главная</a>
+                <a href="/About">О нас</a>
+                <a href="/Catalog">Каталог</a>
+                <a href="/Contacts">Контакты</a>
+                <a href="/pdf/privacy-policy.pdf" target="_blank">Политика конфиденциальности</a>
+            </aside>
+        }
+
+        <main>
+            <h2>«Интерьер-Центр» сегодня - это:</h2>
+            <p>мебельное предприятие с более чем 10-летним опытом работы на рынке. 
+                Мы специализируемся на производстве качественной мебели для дома и офиса, используя только лучшие материалы и современное оборудование. 
+                Наша компания является лидером в своей отрасли благодаря высокому качеству продукции и индивидуальному подходу к каждому клиенту.</p>
+
+            <h3>Группы товаров:</h3>
+            <table>
+                <tr>
+                    <td rowspan="2">Кухни</td>
+                    <td>Милена</td>
+                    <td>Норд</td>
+                </tr>
+                <tr>
+                    <td>Аврора</td>
+                    <td>Барселона</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Спальни</td>
+                    <td>Венеция</td>
+                    <td>Ронда</td>
+                </tr>
+                <tr>
+                    <td>Норд</td>
+                    <td>Дублин</td>
+                </tr>
+            </table>
+
+            <h3>Списки товаров:</h3>
+            <ul>
+                <li>Спальня 1</li>
+                <li>Спальня 2</li>
+                <li>Спальня 3</li>
+            </ul>
+            <ol type="I">
+                <li>Кухня 1</li>
+                <li>Кухня 2</li>
+                <li>Кухня 3</li>
+            </ol>
+            <ul>
+                <li>
+                    Кухня Олива
+                    <ul>
+                        <li>Глянец </li>
+                        <li>Металлик </li>
+                    </ul>
+                </li>
+                <li>Детские </li>
+                <li>Гостиные </li>
+            </ul>
+        </main>
+
+        <aside class="image-container">
+            <div class="slider">
+                <div class="slides">
+                    <!-- Фото 1 -->
+                    <div class="slide">
+                        <img src="images/product1.png" alt="Фото 1">
+                    </div>
+                    <!-- Фото 2 -->
+                    <div class="slide">
+                        <img src="images/product2.png" alt="Фото 2">
+                    </div>
+                    <!-- Фото 3 -->
+                    <div class="slide">
+                        <img src="images/product3.png" alt="Фото 3">
+                    </div>
+                    <!-- Фото 4 -->
+                    <div class="slide">
+                        <img src="images/product4.png" alt="Фото 4">
+                    </div>
+                    <!-- Фото 5 -->
+                    <div class="slide">
+                        <img src="images/product5.png" alt="Фото 5">
+                    </div>
+                    <!-- Фото 6 -->
+                    <div class="slide">
+                        <img src="images/product6.png" alt="Фото 6">
+                    </div>
+                </div>
+                <!-- Кнопки навигации -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </aside>
+
+    <footer>
+        <hr>
+        <p>Все права защищены</p>
+    </footer>
+
+
+</body>
+</html>

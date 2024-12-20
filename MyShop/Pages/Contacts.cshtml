@@ -1,0 +1,92 @@
+﻿@page
+@model MyShop.Pages.ContactsModel
+@{
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Interier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="content">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <aside class="sidebar">
+                <a href="/Index">Главная</a>
+                <a href="/About">О нас</a>
+                <a href="/Catalog">Каталог</a>
+                <a href="/Contacts">Контакты</a>
+                <a href="/Feedback">Отзывы</a>
+                <a href="/pdf/privacy-policy.pdf" target="_blank">Политика конфиденциальности</a>
+            </aside>
+        }
+        else
+        {
+            <aside class="sidebar">
+                <a href="/Index">Главная</a>
+                <a href="/About">О нас</a>
+                <a href="/Catalog">Каталог</a>
+                <a href="/Contacts">Контакты</a>
+                <a href="/pdf/privacy-policy.pdf" target="_blank">Политика конфиденциальности</a>
+            </aside>
+        }
+        <div class="contact-form">
+            <h2>Напишите нам</h2>
+            <form>
+                <div class="form-row">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="yourname@example.com">
+                </div>
+
+                <div class="form-row">
+                    <label for="subject">Тема:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Введите тему сообщения">
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Введите ваше сообщение"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+
+            <h2>Адрес</h2>
+            <p>Контактный номер телефона компании: +7-495-240-91-92</p>
+            <p>Адрес: г. Москва, ул. Московская, 123</p>
+            <p>Email: zakaz@interior-center.shop</p>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCU5YJP0"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    allowfullscreen="true">
+            </iframe>
+        </div>
+    </div>
+
+
+    <footer>
+        <hr>
+        <p>Все права защищены</p>
+    </footer>
+
+</body>
+</html>
